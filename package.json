@@ -1,8 +1,9 @@
 {
   "name": "cs-utils",
-  "displayName": "cs-utils",
+  "displayName": "Cheat Sheet Utils",
   "description": "Utilities for Cheat Sheet project",
   "version": "0.0.1",
+  "author": "lamhq",
   "repository": {
     "type": "git",
     "url": "https://github.com/lamhq/cheat-sheet-utils.git"

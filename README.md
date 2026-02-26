@@ -16,9 +16,43 @@ Before using the extension make sure:
 ## Usage
 
 2. Package this extension into a `.vsix` file.
-1. Load the Cheat Sheet project in VS Code and install the `.vsix` file.
+1. Open Cheat Sheet project in VS Code and install the `.vsix` file.
 2. Open the file you want to preview, then right-click the editor area and choose **Open file in browser**.
 3. The extension will start the dev server, and open the file in the browser when the server is ready.
+
+## Code structure
+
+What's in the folder?
+
+- `package.json` - this is the manifest file in which you declare your extension and command, adding menu item, etc.
+- `extension.js` - this is the main file where you will provide the implementation of your command.
+
+
+## Develop the extension
+
+1. Press `F5` to open a new window with your extension loaded.
+2. Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Open file in browser`.
+3. Set breakpoints in your code inside `extension.js` to debug your extension.
+4. Find output from your extension in the debug console.
+5. You can relaunch the extension from the debug toolbar after changing code in `extension.js`.
+
+
+## Package and publish
+
+Install [vsce](https://github.com/microsoft/vscode-vsce):
+```bash
+pnpm install -g @vscode/vsce
+```
+
+Use vsce to package the extension:
+```bash
+vsce package
+```
+
+Or even publish it to the marketplace:
+```bash
+vsce publish
+```
 
 
 ## Known Issues
