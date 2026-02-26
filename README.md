@@ -1,65 +1,34 @@
-# preview-file README
+# Cheat Sheet Utils
 
-This is the README for your extension "preview-file". After writing up a brief description, we recommend including the following sections.
+## Overview
 
-## Features
+Cheat Sheet Utils is a tool for local development with [Cheat Sheet](https://github.com/lamhq/cheat-sheet) project.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+It helps to preview Markdown files in the browser without running any commands manually to spin up a dev server.
 
-For example if there is an image subfolder under your extension project workspace:
+## Prerequisites
 
-\!\[feature X\]\(images/feature-x.png\)
+Before using the extension make sure:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Node.js and `pnpm` are installed and available in PATH.
+- Cheat Sheet project is installed with `pnpm install`.
 
-## Requirements
+## Usage
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+2. Package this extension into a `.vsix` file.
+1. Load the Cheat Sheet project in VS Code and install the `.vsix` file.
+2. Open the file you want to preview, then right-click the editor area and choose **Open file in browser**.
+3. The extension will start the dev server, and open the file in the browser when the server is ready.
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- The port of dev server is dynamic, so the URL of the preview is not fixed.
+- Starting previews quickly kills earlier servers; only the latest remains.
+- Temp configs accumulate in `tmp/` (add to `.gitignore` or delete manually).
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
 
 ## For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- [Create VS Code Extensions](https://code.visualstudio.com/api/get-started/your-first-extension)
+- [Publishing Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)

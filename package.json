@@ -1,8 +1,12 @@
 {
-  "name": "preview-file",
-  "displayName": "preview-file",
-  "description": "Preview current file in brower",
+  "name": "cs-utils",
+  "displayName": "cs-utils",
+  "description": "Utilities for Cheat Sheet project",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamhq/cheat-sheet-utils.git"
+  },
   "engines": {
     "vscode": "^1.109.0"
   },
@@ -12,10 +16,21 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "preview-file.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "cs-utils.openInBrowser",
+        "title": "Open file in browser"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "cs-utils.openInBrowser",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
