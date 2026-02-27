@@ -15,10 +15,10 @@ Before using the extension make sure:
 
 ## Usage
 
-2. Package this extension into a `.vsix` file.
-1. Open Cheat Sheet project in VS Code and install the `.vsix` file.
-2. Open the file you want to preview, then right-click the editor area and choose **Open file in browser**.
-3. The extension will start the dev server, and open the file in the browser when the server is ready.
+1. [Package](#package-and-publish) this extension into a `.vsix` file.
+2. Open Cheat Sheet project in VS Code and install the `.vsix` file.
+3. Open the file you want to preview, then right-click the editor area and choose **Open file in browser**.
+4. The extension will start the dev server, and open the file in the browser when the server is ready.
 
 ## Code structure
 
